@@ -3,7 +3,7 @@
 import * as React from "react";
 import { BookOpen, Moon, Sun } from "lucide-react";
 import { ThemeProvider, useTheme } from "next-themes";
-
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -126,10 +126,12 @@ function TeacherCard({ teacher }) {
   return (
     <Card className="flex flex-col">
       <div className="flex justify-center mt-4">
-        <img
+        <Image
           src={teacher.image}
           alt={teacher.name}
-          className="w-24 h-24 rounded-full border-2 border-gray-300 dark:border-gray-600"
+          width={96} // Set an explicit width
+          height={96} // Set an explicit height
+          className="rounded-full border-2 border-gray-300 dark:border-gray-600"
         />
       </div>
       <CardHeader>
