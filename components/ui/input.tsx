@@ -6,6 +6,12 @@ import { cn } from "@/app/lib/utils";
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 /* eslint-enable @typescript-eslint/no-empty-object-type */
 
+/**
+ * Input component that extends HTML input attributes with custom styling.
+ * 
+ * @param {InputProps} props - Props for the input element.
+ * @returns {JSX.Element} The rendered input element.
+ */
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
     return (
