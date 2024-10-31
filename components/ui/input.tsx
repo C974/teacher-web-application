@@ -1,18 +1,13 @@
 import * as React from "react";
 import { cn } from "@/app/lib/utils";
 
-// Disable ESLint rule for the empty interface
-/* eslint-disable @typescript-eslint/no-empty-object-type */
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
-/* eslint-enable @typescript-eslint/no-empty-object-type */
-
 /**
  * Input component that extends HTML input attributes with custom styling.
  * 
- * @param {InputProps} props - Props for the input element.
+ * @param {React.InputHTMLAttributes<HTMLInputElement>} props - Props for the input element.
  * @returns {JSX.Element} The rendered input element.
  */
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
   ({ className, type, ...props }, ref) => {
     return (
       <input

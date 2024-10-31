@@ -112,7 +112,6 @@ const sidebarItems = [
   },
 ];
 
-
 function TeacherCard({ teacher }) {
   const { toast } = useToast();
 
@@ -152,12 +151,12 @@ function TeacherCard({ teacher }) {
 const ThemeToggle = () => {
   const { setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
+
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null; 
-  
+  if (!mounted) return null;
 
   return (
     <DropdownMenu>
@@ -181,7 +180,7 @@ const ThemeToggle = () => {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-}
+};
 
 const TeacherDirectory = () => {
   return (
