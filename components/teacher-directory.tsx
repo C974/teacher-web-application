@@ -148,9 +148,10 @@ function TeacherCard({ teacher }) {
   );
 }
 
-function ThemeToggle() {
+const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
+  
 
   React.useEffect(() => {
     setMounted(true);
